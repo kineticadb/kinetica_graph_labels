@@ -3,7 +3,18 @@
 #include <unordered_map>
 #include <string>
 #include "GraphLabelContainer.h"
-
+/*!
+////////////////////////////////////////////////////////////////////////////////////////////
+/// One graph entity to many labels - many Labels to any graph entities 
+/// fixed size light weight scalable Graph Label Container data-structure
+/// Main program that has a rudimentary testing framework and runs a list of unit-tests
+/// Author: Bilge Kaan Karamete (Oct 9, 2023) 
+/// Verstion: 1.0
+/// Note: This is the labelling framework incorporated to the Kinetica-Graph distributed 
+/// hybrid graph DB that works in tandem with Kinetica's relational DB with parallel
+/// OLAP expression support...
+////////////////////////////////////////////////////////////////////////////////////////////
+*/ 
 int test_mimic_graph(std::ostream &out)
 {
     // 1. Assume Dict encoded indexes for unique label strings on graph side
