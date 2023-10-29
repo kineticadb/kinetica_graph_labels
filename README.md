@@ -10,6 +10,7 @@ Author: Bilge Kaan Karamete
 Free Code does not mean that I am a sweat shop coder - be appreciative and pass it on.
 
 ###################################
+
 To build the test:
 - create a build directory
 - cd to that directory
@@ -17,6 +18,7 @@ To build the test:
 - make 
 - TestLabels.x is created
 - Run ./TestLabels.x for the usage.
+
 ####################################
 
 
