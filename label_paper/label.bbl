@@ -1,0 +1,103 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{stl}
+D.~R. Musser, A.~Saini, The STL Tutorial and Reference Guide: C++ Programming
+  with the Standard Template Library, Addison Wesley Longman Publishing Co.
+  USA, 1995.
+
+\bibitem{cppdata}
+M.~A. Weiss, Data Structures and Algorithm Analysis in C++, Addison Wesley
+  Longman Publishing Co. Boston USA, 1998.
+
+\bibitem{graphdbs}
+D.~Fernandes, J.~Bernardino, Graph databases comparison: Allegrograph,
+  arangodb, infinitegraph, neo4j, and orientdb., in: Data, 2018, pp. 373--380.
+
+\bibitem{neo4j}
+J.~Guia, V.~G. Soares, J.~Bernardino, Graph databases: Neo4j analysis., in:
+  ICEIS (1), 2017, pp. 351--356.
+
+\bibitem{tiger}
+A.~Deutsch, Y.~Xu, M.~Wu, V.~Lee, Tigergraph: A native mpp graph database
+  (2019).
+\newblock \href {http://arxiv.org/abs/1901.08248} {\path{arXiv:1901.08248}}.
+
+\bibitem{networkx}
+A.~A. Hagberg, D.~A. Schult, P.~J. Swart, Exploring network structure,
+  dynamics, and function using networkx, in: G.~Varoquaux, T.~Vaught,
+  J.~Millman (Eds.), Proceedings of the 7th Python in Science Conference,
+  Pasadena, CA USA, 2008, pp. 11 -- 15.
+
+\bibitem{rbt}
+R.~Sedgewick,
+  \href{https://api.semanticscholar.org/CorpusID:199513342}{Left-leaning
+  red-black trees}, in: Left--leaning Red-Black Trees, 2008, pp. 1--10.
+\newline\urlprefix\url{https://api.semanticscholar.org/CorpusID:199513342}
+
+\bibitem{rbt2}
+S.~Sainz-Palacios, Flat combined red black trees (2019).
+\newblock \href {http://arxiv.org/abs/1912.11417} {\path{arXiv:1912.11417}}.
+
+\bibitem{hash}
+T.~Ozsari, A hash of hash functions (2003).
+\newblock \href {http://arxiv.org/abs/cs/0310033} {\path{arXiv:cs/0310033}}.
+
+\bibitem{hash2}
+D.~Köppl, Separate chaining meets compact hashing (2019).
+\newblock \href {http://arxiv.org/abs/1905.00163} {\path{arXiv:1905.00163}}.
+
+\bibitem{probing}
+M.~Thorup, Linear probing with 5-independent hashing (2017).
+\newblock \href {http://arxiv.org/abs/1509.04549} {\path{arXiv:1509.04549}}.
+
+\bibitem{probing2}
+D.~E. Knuth, The Art of Computer Programming, Volume 1 (3rd Ed.): Fundamental
+  Algorithms, Addison Wesley Longman Publishing Co., Inc., USA, 1997.
+
+\bibitem{benchmark}
+M.~Leitner-Ankerl, Comprehensive c++ hashmap benchmarks 2022,
+  \url{https://martin.ankerl.com/2022/08/27/hashmap-bench-01}, accessed:
+  2022-08-27.
+
+\bibitem{kineticagraph}
+B.~K. Karamete, L.~Adhami, E.~Glaser, \href{https://arxiv.org/abs/2201.02136}{A
+  fixed storage distributed graph database hybrid with at-scale olap expression
+  and i/o support of a relational db: Kinetica-graph} (2022).
+\newblock \href {http://dx.doi.org/10.48550/ARXIV.2201.02136}
+  {\path{doi:10.48550/ARXIV.2201.02136}}.
+\newline\urlprefix\url{https://arxiv.org/abs/2201.02136}
+
+\bibitem{graphviz}
+GraphViz, Graphviz, \url{https://graphviz.gitlab.io/}, accessed: 2023-10-02.
+
+\bibitem{dls}
+B.~K. Karamete, R.~Aubry, E.~L. Mestreau, S.~Dey, A novel double link structure
+  (dls) with applications to computational engineering and design, AIAA
+  Aerospace Sciences Meeting 54 (2016) 1301.
+\newblock \href {http://dx.doi.org/10.2514/6.2016-1301}
+  {\path{doi:10.2514/6.2016-1301}}.
+
+\bibitem{zram}
+G.~F. Oliveira, et~all, \href{https://arxiv.org/abs/2111.02325}{Extending
+  memory capacity in consumer devices with emerging non-volatile memory: An
+  experimental study}, CoRR abs/2111.02325.
+\newblock \href {http://arxiv.org/abs/2111.02325} {\path{arXiv:2111.02325}}.
+\newline\urlprefix\url{https://arxiv.org/abs/2111.02325}
+
+\bibitem{louvain}
+V.~D. Blondel, J.-L. Guillaume, R.~Lambiotte, E.~Lefebvre, Fast unfolding of
+  communities in large networks, Journal of Statistical Mechanics: Theory and
+  Experiment 2008~(10) (2008) P10008.
+\newblock \href {http://dx.doi.org/10.1088/1742-5468/2008/10/p10008}
+  {\path{doi:10.1088/1742-5468/2008/10/p10008}}.
+
+\bibitem{rsb}
+Y.~Hu, R.~J. Blake, Numerical experiences with partitioning of unstructured
+  meshes, Parallel Computing 20 (1994) 815--829.
+
+\end{thebibliography}
