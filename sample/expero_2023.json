@@ -1,0 +1,130 @@
+{
+  "workbook": {
+    "metadata": {},
+    "config": {},
+    "id": "73b729a0-7f32-11ee-8db0-95be06358439",
+    "name": "expero_2023",
+    "description": "Description for expero_2023",
+    "user_id": "484c44d0-7d8e-11ee-b9d8-936c95761c3c",
+    "warehouse_id": null,
+    "is_example": false,
+    "is_shared": false,
+    "created_at": "2023-11-09T19:01:56.154Z",
+    "updated_at": "2023-11-09T20:48:21.382Z",
+    "userId": "484c44d0-7d8e-11ee-b9d8-936c95761c3c"
+  },
+  "worksheets": [
+    {
+      "config": {},
+      "id": "73c81990-7f32-11ee-8db0-95be06358439",
+      "name": "Sheet 1",
+      "description": "Description for Sheet 1",
+      "previous_worksheet_id": null,
+      "next_worksheet_id": null,
+      "workbook_id": "73b729a0-7f32-11ee-8db0-95be06358439",
+      "created_at": "2023-11-09T19:01:56.265Z",
+      "updated_at": "2023-11-09T19:01:56.265Z",
+      "workbookId": "73b729a0-7f32-11ee-8db0-95be06358439"
+    }
+  ],
+  "blockMap": {
+    "73c81990-7f32-11ee-8db0-95be06358439": [
+      {
+        "config": {},
+        "id": "73d279d0-7f32-11ee-8db0-95be06358439",
+        "name": "Block 1",
+        "description": "Description for Block 1",
+        "content": "\"create or replace directed graph expero.default_graph (\\n    nodes => INPUT_TABLE(\\n        SELECT\\n            id as NAME,\\n            label as LABEL\\n        FROM expero.vertexes\\n    ),\\n    edges => INPUT_TABLE(\\n        SELECT\\n            id as ID,\\n            source_name as NODE1_NAME,\\n            target_name as NODE2_NAME,\\n            label as LABEL\\n\\n        FROM expero.edges\\n    ),\\n    OPTIONS => KV_PAIRS(\\n     --graph_table = 'expero.default_graph_table',\\n     is_partitioned = 'false',\\n     export_graph_schema = 'true', --default true\\n     cluster_graph_schema = 'true') -- default false\\n);\\n\"",
+        "previous_block_id": null,
+        "next_block_id": "9f2a35a0-7f32-11ee-8db0-95be06358439",
+        "block_type_id": "84b9233c-14e3-11eb-adc1-0242ac120002",
+        "worksheet_id": "73c81990-7f32-11ee-8db0-95be06358439",
+        "created_at": "2023-11-09T19:01:56.334Z",
+        "updated_at": "2023-11-09T19:03:09.204Z",
+        "worksheetId": "73c81990-7f32-11ee-8db0-95be06358439",
+        "blockTypeId": "84b9233c-14e3-11eb-adc1-0242ac120002"
+      },
+      {
+        "config": {},
+        "id": "9f2a35a0-7f32-11ee-8db0-95be06358439",
+        "name": "Block",
+        "description": "Description for Block",
+        "content": "\"DROP TABLE IF EXISTS expero.default_query; \\nEXECUTE FUNCTION\\nQUERY_GRAPH(\\n    GRAPH => 'expero.default_graph',\\n    QUERIES => INPUT_TABLES( \\n        (SELECT 'bank' AS NODE_LABEL),\\n        (SELECT 'address' AS TARGET_NODE_LABEL)\\n    ),\\n    RESTRICTIONS => INPUT_TABLE(\\n        SELECT id AS NODE_NAME, \\n               0 AS ONOFFCOMPARED \\n        FROM expero.vertexes WHERE label = 'exp_comment'),\\n    ADJACENCY_TABLE => 'expero.default_query',\\n    RINGS => 2,\\n    OPTIONS => KV_PAIRS( force_undirected = 'true', 'limit' = '100')\\n);\\n\"",
+        "previous_block_id": "73d279d0-7f32-11ee-8db0-95be06358439",
+        "next_block_id": "fcdf3310-7f3e-11ee-8db0-95be06358439",
+        "block_type_id": "84b9233c-14e3-11eb-adc1-0242ac120002",
+        "worksheet_id": "73c81990-7f32-11ee-8db0-95be06358439",
+        "created_at": "2023-11-09T19:03:09.050Z",
+        "updated_at": "2023-11-09T20:31:41.100Z",
+        "worksheetId": "73c81990-7f32-11ee-8db0-95be06358439",
+        "blockTypeId": "84b9233c-14e3-11eb-adc1-0242ac120002"
+      },
+      {
+        "config": {},
+        "id": "fcdf3310-7f3e-11ee-8db0-95be06358439",
+        "name": "Block",
+        "description": "Description for Block",
+        "content": "\"DROP TABLE if exists expero.default_query;\\nEXECUTE FUNCTION\\n    QUERY_GRAPH(\\n    GRAPH => 'expero.default_graph',\\n    QUERIES => INPUT_TABLES( \\n        (SELECT 'bank' AS NODE_LABEL),\\n        (SELECT 'address' AS TARGET_NODE_LABEL)\\n    ),\\n    RESTRICTIONS => INPUT_TABLE(\\n        SELECT id AS NODE_NAME, \\n               0 AS ONOFFCOMPARED \\n        FROM expero.vertexes WHERE label = 'exp_comment'),\\n    ADJACENCY_TABLE => 'expero.default_query',\\n    RINGS => 2,\\n    OPTIONS => KV_PAIRS( force_undirected = 'true', 'limit' = '10'));\\n    \\n\"",
+        "previous_block_id": "9f2a35a0-7f32-11ee-8db0-95be06358439",
+        "next_block_id": "4bde3680-7f41-11ee-8db0-95be06358439",
+        "block_type_id": "84b9233c-14e3-11eb-adc1-0242ac120002",
+        "worksheet_id": "73c81990-7f32-11ee-8db0-95be06358439",
+        "created_at": "2023-11-09T20:31:40.225Z",
+        "updated_at": "2023-11-09T20:48:12.553Z",
+        "worksheetId": "73c81990-7f32-11ee-8db0-95be06358439",
+        "blockTypeId": "84b9233c-14e3-11eb-adc1-0242ac120002"
+      },
+      {
+        "config": {},
+        "id": "4bde3680-7f41-11ee-8db0-95be06358439",
+        "name": "Block",
+        "description": "Description for Block",
+        "content": "\"SELECT *\\nFROM expero.default_query\\nINNER JOIN expero.edges e ON (e.id = QUERY_EDGE_ID)\\nINNER JOIN expero.vertexes as s ON (e.source_label = s.label AND e.source_name = s.id)\\nINNER JOIN expero.vertexes as t on (e.target_label = t.label AND e.target_name = t.id);\\n\"",
+        "previous_block_id": "fcdf3310-7f3e-11ee-8db0-95be06358439",
+        "next_block_id": null,
+        "block_type_id": "84b9233c-14e3-11eb-adc1-0242ac120002",
+        "worksheet_id": "73c81990-7f32-11ee-8db0-95be06358439",
+        "created_at": "2023-11-09T20:48:11.752Z",
+        "updated_at": "2023-11-09T20:48:21.323Z",
+        "worksheetId": "73c81990-7f32-11ee-8db0-95be06358439",
+        "blockTypeId": "84b9233c-14e3-11eb-adc1-0242ac120002"
+      }
+    ]
+  },
+  "vizMap": {
+    "73d279d0-7f32-11ee-8db0-95be06358439": [],
+    "9f2a35a0-7f32-11ee-8db0-95be06358439": [
+      {
+        "config": {
+          "type": "graph"
+        },
+        "id": "46f6c0a0-7f33-11ee-8db0-95be06358439",
+        "name": "Graph Visualization",
+        "description": "Description for graph visualization",
+        "block_id": "9f2a35a0-7f32-11ee-8db0-95be06358439",
+        "visualization_type_id": "278540bd-cd50-4f78-871b-65b94001dfee",
+        "created_at": "2023-11-09T19:07:50.570Z",
+        "updated_at": "2023-11-09T19:07:50.570Z",
+        "blockId": "9f2a35a0-7f32-11ee-8db0-95be06358439",
+        "visualizationTypeId": "278540bd-cd50-4f78-871b-65b94001dfee"
+      }
+    ],
+    "fcdf3310-7f3e-11ee-8db0-95be06358439": [],
+    "4bde3680-7f41-11ee-8db0-95be06358439": [
+      {
+        "config": {
+          "type": "graph"
+        },
+        "id": "5a9d63d0-7f41-11ee-8db0-95be06358439",
+        "name": "Graph Visualization",
+        "description": "Description for graph visualization",
+        "block_id": "4bde3680-7f41-11ee-8db0-95be06358439",
+        "visualization_type_id": "278540bd-cd50-4f78-871b-65b94001dfee",
+        "created_at": "2023-11-09T20:48:36.493Z",
+        "updated_at": "2023-11-09T20:48:36.493Z",
+        "blockId": "4bde3680-7f41-11ee-8db0-95be06358439",
+        "visualizationTypeId": "278540bd-cd50-4f78-871b-65b94001dfee"
+      }
+    ]
+  }
+}

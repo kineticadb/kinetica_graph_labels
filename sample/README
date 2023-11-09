@@ -1,0 +1,7 @@
+####################################################################################################################
+Samples directory includes the kinetica workbook json file to demo a sample hybrid query 
+with Kinetica-Graph to get multi-hop many to many label query as input to OLAP joins vs the original db tables. 
+The required Kinetica header csv files for nodes/edges are also included as gzip. Import these files into
+Kinetica as DB Tables before running the json in kinetica workbook. This sample is a smaller data-set than 
+4.3 bil original version.
+####################################################################################################################
