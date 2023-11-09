@@ -21,5 +21,18 @@ To build the test:
 
 ####################################
 
+****Docs directory has the paper published on arXiv - https://arxiv.org/abs/2311.03631
 
+use the following bibtex citation for referencing:
+
+@misc{karamete2023novel,
+      title={Novel data structures for label based queries specifically efficient for billion+ property graph networks using Kinetica-Graph}, 
+      author={Bilge Kaan Karamete and Eli Glaser},
+      year={2023},
+      eprint={2311.03631},
+      archivePrefix={arXiv},
+      primaryClass={cs.DS}
+}
+
+Sample dircetory has the Kinetica Workbook Json and the smaller data-set to replicate the query mentioned in the paper above.
 
